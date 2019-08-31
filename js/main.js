@@ -39,9 +39,13 @@ function checkForMatch() {
         }
     }
 }
+cardarray = []
 
 function flipCard() {
-    var cardId = this.getAttribute('data-id')
+
+    var cardId = cardarray[Math.floor(Math.random() * cardarray.length)]
+    console.log(cardId)
+    cardarray.splice(cardarray.indexOf(cardId), 1)
     console.log(cards[cardId].rank + ' is fipped')
     console.log(cards[cardId].cardImage)
     console.log(cards[cardId].suit)
@@ -51,6 +55,7 @@ function flipCard() {
 }
 
 function createBoard() {
+    cardarray = [0, 1, 2, 3];
     for (var i = 0; i < cards.length; i++) {
         var cardElement = document.createElement('img');
         cardElement.setAttribute('src', "images/back.png")
