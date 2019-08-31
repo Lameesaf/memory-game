@@ -94,8 +94,13 @@ footer {
     display: block;
     content: " ";
     clear: both;
-    height: 0;
+    height: auto;
     font-size: 0;
+}
+
+board {
+    width: auto;
+    height: auto;
 }
 
 .name {

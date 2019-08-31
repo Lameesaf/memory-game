@@ -22,27 +22,56 @@ var cards = [{
     }
 ];
 var cardInPlay = [];
+var score = 0;
 
 function checkForMatch() {
+
+
     if (cardInPlay.length === 2) {
         if (cardInPlay[0] === cardInPlay[1]) {
-            // alert('we have a wiiiinnner')
-            console.log('we have a wiiiinnner')
+            setTimeout(() => { alert('we have a wiiiinnner') }, 100)
+            score += 1;
+            document.getElementById('score').innerHTML = "<h4>score :" + score + "</h4>"
 
         } else {
-            console.log('at least you\'ve tried')
-                // alert('at least you\'ve tried')
+            setTimeout(() => { alert('at least you\'ve tried') }, 100)
+
         }
     }
 }
 
-function flipCard(cardID) {
-    console.log(cards[cardID].rank + ' is fipped')
-    console.log(cards[cardID].cardImage)
-    console.log(cards[cardID].suit)
-    cardInPlay.push(cards[cardID].rank)
+function flipCard() {
+    var cardId = this.getAttribute('data-id')
+    console.log(cards[cardId].rank + ' is fipped')
+    console.log(cards[cardId].cardImage)
+    console.log(cards[cardId].suit)
+    cardInPlay.push(cards[cardId].rank)
+    this.setAttribute('src', cards[cardId].cardImage)
     checkForMatch();
 }
 
-flipCard(0);
-flipCard(2);
+function createBoard() {
+    for (var i = 0; i < cards.length; i++) {
+        var cardElement = document.createElement('img');
+        cardElement.setAttribute('src', "images/back.png")
+        cardElement.setAttribute('data-id', i)
+        cardElement.addEventListener('click', flipCard)
+        document.getElementById('game-board').appendChild(cardElement)
+    }
+}
+
+var b = document.getElementById('b1');
+
+b.addEventListener('click', reset)
+
+function reset() {
+    for (var i = 0; i < cards.length; i++) {
+        var element = document.querySelectorAll('img')
+        var div = document.getElementById('game-board');
+        div.removeChild(element[0]);
+    }
+    cardInPlay = []
+    createBoard();
+}
+
+createBoard();
