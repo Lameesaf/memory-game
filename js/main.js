@@ -31,10 +31,15 @@ function checkForMatch() {
         if (cardInPlay[0] === cardInPlay[1]) {
             setTimeout(() => { alert('we have a wiiiinnner') }, 100)
             score += 1;
-            document.getElementById('score').innerHTML = "<h4>score :" + score + "</h4>"
+            document.getElementById('score').innerHTML = "<h4>score : " + score + "</h4>"
+            setTimeout(reset, 150)
+
 
         } else {
             setTimeout(() => { alert('at least you\'ve tried') }, 100)
+            setTimeout(reset, 100)
+
+
 
         }
     }
@@ -64,10 +69,6 @@ function createBoard() {
         document.getElementById('game-board').appendChild(cardElement)
     }
 }
-
-var b = document.getElementById('b1');
-
-b.addEventListener('click', reset)
 
 function reset() {
     for (var i = 0; i < cards.length; i++) {

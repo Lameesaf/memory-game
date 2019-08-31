@@ -107,3 +107,10 @@ board {
     color: #F15B31;
     font-weight: 700;
 }
+
+#score {
+    color: #F15B31;
+    font-weight: 800;
+    font-size: 20px;
+    margin: auto;
+}
