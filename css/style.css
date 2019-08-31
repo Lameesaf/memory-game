@@ -6,7 +6,6 @@ header {
 
 h1 {
     font-family: "Raleway", sans-serif;
-    /* color: #0D2C40; */
     letter-spacing: 1px;
     font-weight: 400;
     font-size: 45px;
@@ -36,16 +35,6 @@ main {
     margin: 35px auto;
 }
 
-
-/* h2 {
-    font-family: "Raleway", sans-serif;
-    color: #F15B31;
-    letter-spacing: 1px;
-    font-weight: 600;
-    font-size: 18px;
-    text-transform: uppercase;    
-} */
-
 h3 {
     font-family: "Raleway", sans-serif;
     color: #0D2C40;
@@ -63,7 +52,9 @@ p {
 
 body {
     text-align: center;
-    margin: 0;
+    margin: auto;
+    padding: auto;
+    width: 100%;
 }
 
 img {
@@ -72,21 +63,16 @@ img {
 
 footer {
     text-transform: uppercase;
-    padding: 0 20px;
+    padding: auto;
     background-color: #0D2C40;
     color: white;
     font-size: 14px;
     letter-spacing: .08em;
     font-weight: 500;
     font-family: "Raleway", sans-serif;
-}
-
-.Copyright {
-    float: left;
-}
-
-.message {
-    float: right;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .clearfix:after {
@@ -110,7 +96,7 @@ board {
 
 #score {
     color: #F15B31;
-    font-weight: 800;
+    font-weight: 700;
     font-size: 20px;
     margin: auto;
 }
