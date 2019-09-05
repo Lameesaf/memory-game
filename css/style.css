@@ -1,7 +1,7 @@
 header {
-    background-color: #F15B31;
+    background-color: #fa6479;
     color: #FFFFFF;
-    padding: 30px 20px;
+    padding: 20px 20px;
 }
 
 h1 {
@@ -18,7 +18,7 @@ nav {
     padding: 20px 0;
 }
 
-a {
+#a {
     margin: 0 20px;
     color: #FFFFFF;
     text-transform: uppercase;
@@ -26,13 +26,13 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+#a:hover {
     border-bottom-color: white;
 }
 
 main {
-    width: 850px;
-    margin: 35px auto;
+    width: 950px;
+    margin: 20px auto;
 }
 
 h3 {
@@ -58,30 +58,23 @@ body {
 }
 
 img {
-    margin: 40px 8px;
+    margin: 15px 8px;
+    height: 176px;
+    width: 130px;
 }
 
 footer {
     text-transform: uppercase;
-    padding: auto;
     background-color: #0D2C40;
     color: white;
     font-size: 14px;
     letter-spacing: .08em;
     font-weight: 500;
     font-family: "Raleway", sans-serif;
-    position: fixed;
+    position: relative;
     bottom: 0;
+    padding: 5px;
     width: 100%;
-}
-
-.clearfix:after {
-    visibility: hidden;
-    display: block;
-    content: " ";
-    clear: both;
-    height: auto;
-    font-size: 0;
 }
 
 board {
@@ -90,13 +83,34 @@ board {
 }
 
 .name {
-    color: #F15B31;
+    color: #fa6479;
     font-weight: 700;
 }
 
-#score {
-    color: #F15B31;
+h4 {
+    color: #fa6479;
     font-weight: 700;
     font-size: 20px;
     margin: auto;
+    width: 50%;
+    float: left;
+}
+
+#start {
+    background-color: #ffffff;
+    border: solid 2px #fa6479;
+    padding: 5px 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #00A6B3;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+#p1score,
+#p2score {
+    color: #00A6B3;
+    font-weight: bolder;
 }
